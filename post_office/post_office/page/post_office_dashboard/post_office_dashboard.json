@@ -1,0 +1,21 @@
+{
+ "content": null,
+ "creation": "2026-02-22 00:00:00.000000",
+ "doctype": "Page",
+ "icon": "",
+ "idx": 0,
+ "modified": "2026-02-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Post Office",
+ "name": "post-office-dashboard",
+ "owner": "Administrator",
+ "page_name": "post-office-dashboard",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Post Office Dashboard"
+}

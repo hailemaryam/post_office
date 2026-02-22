@@ -1,0 +1,246 @@
+.po-dashboard {
+	padding: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Stat Cards */
+.po-stats-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.po-stat-card {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.po-stat-card:hover {
+	box-shadow: var(--shadow-sm);
+	transform: translateY(-1px);
+}
+
+.po-stat-icon {
+	width: 48px;
+	height: 48px;
+	border-radius: var(--border-radius-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+#stat-total-weight .po-stat-icon {
+	background: #e8f4fd;
+	color: #4E79A7;
+}
+
+#stat-total-bags .po-stat-icon {
+	background: #fef3e2;
+	color: #F28E2B;
+}
+
+#stat-total-items .po-stat-icon {
+	background: #e8f5e9;
+	color: #59A14F;
+}
+
+#stat-avg-weight .po-stat-icon {
+	background: #fce4ec;
+	color: #E15759;
+}
+
+.po-stat-content {
+	min-width: 0;
+}
+
+.po-stat-value {
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--text-color);
+	line-height: 1.2;
+}
+
+.po-stat-label {
+	font-size: 12px;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Chart Cards */
+.po-charts-row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.po-chart-card {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	overflow: hidden;
+}
+
+.po-chart-header {
+	padding: 16px 20px 0;
+}
+
+.po-chart-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--heading-color);
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+.po-chart-body {
+	padding: 8px 12px 12px;
+	min-height: 100px;
+}
+
+/* Top Offices Table */
+.po-table-section {
+	margin-bottom: 24px;
+}
+
+.po-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.po-table th {
+	padding: 10px 16px;
+	text-align: left;
+	font-weight: 600;
+	color: var(--text-muted);
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	border-bottom: 2px solid var(--border-color);
+}
+
+.po-table td {
+	padding: 12px 16px;
+	font-size: 14px;
+	color: var(--text-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.po-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.po-table tbody tr:hover {
+	background: var(--fg-hover-color, var(--control-bg));
+}
+
+.po-rank {
+	font-weight: 700;
+	color: var(--text-muted);
+	width: 50px;
+}
+
+.po-office-name {
+	font-weight: 500;
+}
+
+.po-weight-cell {
+	width: 50%;
+}
+
+.po-weight-bar-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+}
+
+.po-weight-bar {
+	height: 8px;
+	background: linear-gradient(90deg, #4E79A7, #76B7B2);
+	border-radius: 4px;
+	min-width: 4px;
+	transition: width 0.6s ease;
+}
+
+.po-weight-value {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-color);
+	white-space: nowrap;
+}
+
+/* No Data State */
+.po-no-data {
+	text-align: center;
+	color: var(--text-muted);
+	padding: 48px 20px;
+	font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+	.po-stats-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.po-dashboard {
+		padding: 12px;
+	}
+
+	.po-stats-row {
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+
+	.po-charts-row {
+		grid-template-columns: 1fr;
+	}
+
+	.po-stat-card {
+		padding: 14px 16px;
+	}
+
+	.po-stat-value {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.po-stats-row {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] #stat-total-weight .po-stat-icon {
+	background: rgba(78, 121, 167, 0.2);
+}
+
+[data-theme="dark"] #stat-total-bags .po-stat-icon {
+	background: rgba(242, 142, 43, 0.2);
+}
+
+[data-theme="dark"] #stat-total-items .po-stat-icon {
+	background: rgba(89, 161, 79, 0.2);
+}
+
+[data-theme="dark"] #stat-avg-weight .po-stat-icon {
+	background: rgba(225, 87, 89, 0.2);
+}
