@@ -11,15 +11,14 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "post_office",
-# 		"logo": "/assets/post_office/logo.png",
-# 		"title": "Post Office",
-# 		"route": "/post_office",
-# 		"has_permission": "post_office.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "post_office",
+		"logo": "/assets/post_office/logo.svg",
+		"title": "Post Office",
+		"route": "/app/post-office-dashboard",
+	}
+]
 
 # Includes in <head>
 # ------------------
