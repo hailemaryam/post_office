@@ -78,6 +78,15 @@ class PostOfficeDashboard {
 					</div>
 				</div>
 
+				<div class="po-table-section">
+					<div class="po-chart-card">
+						<div class="po-chart-header">
+							<div class="po-chart-title">Top 5 Offices by Weight</div>
+						</div>
+						<div class="po-chart-body" id="top-offices-table"></div>
+					</div>
+				</div>
+
 				<div class="po-charts-row">
 					<div class="po-chart-card">
 						<div class="po-chart-header">
@@ -105,15 +114,6 @@ class PostOfficeDashboard {
 							<div class="po-chart-title">Bag Weight Distribution</div>
 						</div>
 						<div class="po-chart-body" id="chart-weight-dist"></div>
-					</div>
-				</div>
-
-				<div class="po-table-section">
-					<div class="po-chart-card">
-						<div class="po-chart-header">
-							<div class="po-chart-title">Top 5 Offices by Weight</div>
-						</div>
-						<div class="po-chart-body" id="top-offices-table"></div>
 					</div>
 				</div>
 			</div>
@@ -269,6 +269,7 @@ class PostOfficeDashboard {
 						<span class="po-weight-value">${d.total_weight} kg</span>
 					</div>
 				</td>
+				<td class="po-revenue-cell">${frappe.format(d.total_revenue, { fieldtype: "Currency" })}</td>
 			</tr>`
 			)
 			.join("");
@@ -280,6 +281,7 @@ class PostOfficeDashboard {
 						<th style="width:50px">#</th>
 						<th>Office</th>
 						<th>Total Weight</th>
+						<th>Revenue</th>
 					</tr>
 				</thead>
 				<tbody>${rows}</tbody>

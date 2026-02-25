@@ -58,7 +58,7 @@ def get_dashboard_data():
 
 	top_offices = frappe.db.sql(
 		"""
-		SELECT origin_office AS office, ROUND(SUM(weight), 2) AS total_weight
+		SELECT origin_office AS office, ROUND(SUM(weight), 2) AS total_weight, ROUND(COALESCE(SUM(revenue), 0), 2) AS total_revenue
 		FROM `tabBag Dispatched Detail`
 		WHERE IFNULL(origin_office, '') != ''
 		GROUP BY origin_office

@@ -23,7 +23,7 @@ jobs:
           script: |
             cd /home/frappe/frappe-bench/apps/post_office/
             git pull
-            bench --site post_office.memby.online migrate
+            bench --site postoffice.memby.online migrate
 
       - name: Build and Restart
         uses: appleboy/ssh-action@v0.1.4

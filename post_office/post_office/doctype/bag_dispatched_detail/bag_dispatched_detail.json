@@ -13,6 +13,7 @@
   "origin_office",
   "destination_office",
   "column_break_2",
+  "revenue",
   "weight",
   "weight_received",
   "seal_number",
@@ -64,6 +65,12 @@
   {
    "fieldname": "column_break_2",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "revenue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Revenue"
   },
   {
    "fieldname": "weight",
